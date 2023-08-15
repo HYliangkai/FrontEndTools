@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+      "vite.config.ts": "tsconfig.json,.gitignore,pnpm-lock.yaml,tsconfig.node.json,.eslintignore,.eslintrc.json,.prettierrc,components.d.ts,index.html"
+    },
+    "html-css-class-completion.includeGlobPattern": "**/src/style/**.{css,scss}",
+    "prettier.configPath": "./.prettierrc",
+    "eslint.enable": true,
+  },
+}

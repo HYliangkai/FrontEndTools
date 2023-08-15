@@ -1,0 +1,101 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "parser": "@typescript-eslint/parser",
+    "extraFileExtensions": [
+      ".vue"
+    ],
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "plugins": [
+    "vue",
+    "@typescript-eslint"
+  ],
+  "extends": [],
+  "rules": {
+    "@typescript-eslint/naming-convention": [
+      1,
+      {
+        "selector": [
+          "variableLike"
+        ],
+        "format": [
+          "snake_case"
+        ],
+        "trailingUnderscore": "allowSingleOrDouble"
+      }
+    ],
+    "vue/attributes-order": [
+      2,
+      {
+        "order": [
+          "CONDITIONALS",
+          [
+            "SLOT",
+            "DEFINITION",
+            "LIST_RENDERING",
+            "CONTENT",
+            "TWO_WAY_BINDING",
+            "RENDER_MODIFIERS",
+            "OTHER_DIRECTIVES"
+          ],
+          [
+            "GLOBAL",
+            "ATTR_STATIC",
+            "UNIQUE"
+          ],
+          "ATTR_SHORTHAND_BOOL",
+          "ATTR_DYNAMIC",
+          "EVENTS"
+        ],
+        "alphabetical": false
+      }
+    ],
+    "vue/html-self-closing": [
+      2,
+      {
+        "html": {
+          "void": "always",
+          "normal": "never",
+          "component": "always"
+        },
+        "svg": "always",
+        "math": "always"
+      }
+    ],
+    "vue/no-use-v-if-with-v-for": [
+      1,
+      {
+        "allowUsingIterationVar": false
+      }
+    ],
+    "vue/v-bind-style": [
+      2,
+      "shorthand"
+    ],
+    "vue/v-on-style": [
+      "error",
+      "shorthand"
+    ],
+    "vue/no-side-effects-in-computed-properties": 2,
+    "vue/no-async-in-computed-properties": 2,
+    "vue/attribute-hyphenation": [
+      2,
+      "always"
+    ],
+    "vue/component-name-in-template-casing": [
+      2,
+      "PascalCase"
+    ]
+  }
+}

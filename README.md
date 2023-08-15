@@ -1,0 +1,76 @@
+# Tauri Application Demo
++ run `pnpm run tauri dev`or `pnpm run desdev` to setup the application 
+
+## 小功能
+- [ ] 白天/夜间模式
+- [x] 窗口置顶
+- [ ] 侧边栏可缩放
+- [ ] 全局搜索
+
+## 插件系统
+
+插件可插拔??
+
+## 前端工具箱待完成的内容
+
+### Todo-List
+- [ ] 一个todolist,作为最开始的目标
+- [ ] 番茄时钟
+
+
+
+### 图片
+
+- [x] 图片 <-> Base64 相互转化
+- [ ] 图片画质压缩 / 图片画质修复
+- [ ] 图片类型更改 png - jpg - jpeg - svg (主要是 svg->png  png<->jpg)
+- [ ] pdf转图片
+
+### 颜色
+- [ ] hex - rgb - srgb 快速计算
+- [ ] 颜色选择推荐
+- [ ] 颜色搭配推荐
+
+### 低代码
+- [ ] 基于vue3的静态页面半低代码平台
+
+### 数据
+- [ ] 时间戳转化 
+
+### 字典
+- [ ] 快速API查询
+
+### 下载
+- [ ] 可自定义线程的下载器(maybe支持百度云/阿里云/蓝奏云/夸克云)
+
+### Other plan
++ 系统资源监视器
+
+
+## 系统UI
+
+*mac风格*
+
+![image-20230718164137531](https://chzky-1312081881.cos.ap-nanjing.myqcloud.com/note/image-20230718164137531.png)
+
+## 代码分工
+
+### 选择持久化存储方式
++ IndexedDB  
+  优点:
+  1. 性能强于sqllite(c->rust->js)?
+  2. 语法容易
+  缺点:
+  1. 无法在rust端交互
++ SqlLite  
+  优点:
+  1. 在rust端交互,有利于高性能计算
+  缺点:
+  1. 语法
+  2. 构建可能会有问题
+
+### 统一代码
+
++ 使用`fp-ts`将ts的代码风格FP化,统一的fp处理方式
++ 使用统一的commonStyle
+

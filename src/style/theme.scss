@@ -1,0 +1,145 @@
+//主题 , 可根据现有项目自定义
+
+$primary: #005edf;
+$success: #eaffd0;
+$warning: #fce38a;
+$danger: #f38181;
+$info: #c8c9cc;
+$page: #f3f3f3;
+$font: #3755dc;
+
+/** @color */
+.bg-primary {
+  background-color: $primary;
+}
+.bg-success {
+  background-color: $success;
+}
+.bg-warning {
+  background-color: $warning;
+}
+.bg-danger {
+  background-color: $danger;
+}
+.bg-info {
+  background-color: $info;
+}
+.bg-page {
+  background-color: $page;
+}
+
+/** @text-color */
+$primary-t: #303133;
+$regular: #606266;
+$secondary: #909399;
+$placeholder: #a8abb2;
+$disabled: #c0c4cc;
+.color-font {
+  color: $font;
+}
+.color-primary {
+  color: $primary;
+}
+.color-regular {
+  color: $regular;
+}
+.color-secondary {
+  color: $secondary;
+}
+.color-placeholder {
+  color: $placeholder;
+}
+.color-disabled {
+  color: $disabled;
+}
+
+/** @border */
+$darker: #cdd0d6;
+$dark: #d4d7de;
+$base: #dcdfe6;
+$light: #e4e7ed;
+$lighter: #ebeef5;
+$extra-light: #f2f6fc;
+.border-darker {
+  border-color: $darker;
+}
+.border-dark {
+  border-color: $dark;
+}
+.border-base {
+  border-color: $base;
+}
+.border-light {
+  border-color: $light;
+}
+.border-lighter {
+  border-color: $lighter;
+}
+.border-extra-light {
+  border-color: $extra-light;
+}
+
+/** @radius */
+.radius-small {
+  border-radius: 2px;
+}
+.radius-large {
+  border-radius: 4px;
+}
+.radius-round {
+  border-radius: 20px;
+}
+
+/** @shadow */
+$basic-shadow: 0px 12px 32px 4px rgba(0, 0, 0, 0.04), 0px 8px 20px rgba(0, 0, 0, 0.08);
+$light-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+$lighter-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+$dark-shadow: 0px 16px 48px 16px rgba(0, 0, 0, 0.08), 0px 12px 32px rgba(0, 0, 0, 0.12),
+  0px 8px 16px -8px rgba(0, 0, 0, 0.16);
+.basic-shadow {
+  box-shadow: $basic-shadow;
+}
+.light-shadow {
+  box-shadow: $light-shadow;
+}
+.lighter-shadow {
+  box-shadow: $lighter-shadow;
+}
+.dark-shadow {
+  box-shadow: $dark-shadow;
+}
+.hover-basic-shadow {
+  &:hover {
+    box-shadow: $basic-shadow;
+  }
+}
+.hover-light-shadow {
+  &:hover {
+    box-shadow: $light-shadow;
+  }
+}
+.hover-lighter-shadow {
+  &:hover {
+    box-shadow: $lighter-shadow;
+  }
+}
+.hover-dark-shadow {
+  &:hover {
+    box-shadow: $dark-shadow;
+  }
+}
+
+/** @font-family */
+* {
+  font-family: 'PingFang SC', 'Microsoft Yahei';
+}
+.font-base {
+  font-family: 'PingFang SC', 'Microsoft Yahei';
+}
+.font-kaiti {
+  font-family: 'STKaiti', 'KaiTi';
+}
+
+.font-ms {
+  font-family: 'Comic Sans MS';
+}
