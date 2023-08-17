@@ -27,7 +27,8 @@
 <script setup lang="ts">
 //import
 import {routes, RouteType} from '@/router/routes'
-import {Own} from '@/utils/FE/Own'
+import {Own} from '@/utils/FP/mod'
+
 import {option} from '@/utils/mod'
 import {RouteRecordRaw} from 'vue-router'
 

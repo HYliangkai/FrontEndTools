@@ -4,7 +4,7 @@ import router from '@/router/mod'
 
 import 'virtual:svg-icons-register'
 
-import './style/mod.scss'
+import './style/commonStyle/mod.scss'
 import 'ant-design-vue/dist/reset.css';
 
 

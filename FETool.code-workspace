@@ -7,9 +7,9 @@
   "settings": {
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
-      "vite.config.ts": "tsconfig.json,.gitignore,pnpm-lock.yaml,tsconfig.node.json,.eslintignore,.eslintrc.json,.prettierrc,components.d.ts,index.html"
+      "vite.config.ts": "tsconfig.json,.gitignore,pnpm-lock.yaml,tsconfig.node.json,.eslintignore,.eslintrc.json,.prettierrc,components.d.ts,index.html,.gitmodules"
     },
-    "html-css-class-completion.includeGlobPattern": "**/src/style/**.{css,scss}",
+    "html-css-class-completion.includeGlobPattern": "**/src/style/commonStyle/**.{css,scss}",
     "prettier.configPath": "./.prettierrc",
     "eslint.enable": true,
   },

@@ -30,10 +30,7 @@
     </div>
     <!-- Html:操作/展示区域 -->
     <div class="h-30per x-hidden">
-      <div
-        v-if="base64"
-        class="px-20 mb-20 flex"
-      >
+      <div v-if="base64" class="px-20 mb-20 flex">
         <img
           height="63"
           width="100"
@@ -52,10 +49,7 @@
       </div>
 
       <div class="row-center">
-        <CkBtn
-          :disable="base64 == ''"
-          @click="image_save"
-        >
+        <CkBtn :disable="base64 == ''" @click="image_save">
           <div class="box-center">
             <img
               height="12"
@@ -66,10 +60,7 @@
           </div>
         </CkBtn>
 
-        <CkBtn
-          :disable="base64 == ''"
-          @click="copy"
-        >
+        <CkBtn :disable="base64 == ''" @click="copy">
           <div class="box-center">
             <img
               height="12"
@@ -98,7 +89,7 @@ import {error_message, info_message} from '@/hooks/mod'
 import {downloadDir, desktopDir} from '@tauri-apps/api/path'
 import {debounce} from '@/utils/mod'
 import {option} from '@/utils/mod'
-import {Own} from '@/utils/FE/Own'
+import {Own} from '@/utils/FP/mod'
 
 function dragenter(event: any): void {
   event.stopPropagation()
@@ -151,7 +142,7 @@ function drop(event: any) {
     },
     async () => {
       await error_message('只可转化图片')
-    }
+    },
   )
 }
 
@@ -167,7 +158,7 @@ const image_select = debounce(async () => {
     ],
   })
 
-  option(path).map(res => {
+  option(path).map((res) => {
     Own(res)
       .is_array()
       .match_false(async () => {
@@ -197,7 +188,7 @@ const image_save = debounce(async () => {
     defaultPath: await desktopDir(),
   })
   //Untitled
-  option(save_path).map(async path => {
+  option(save_path).map(async (path) => {
     const name = option(path.split('/').at(-1))
       .to_own('Untitled')
       .is_match('Untitled')
@@ -205,7 +196,7 @@ const image_save = debounce(async () => {
         // 是 Untitled  用文件名替代
         () => option(image_info.value.name.split('.').at(0)).unwrap_or('Untitled'),
         // 不是 Untitled
-        () => option(path.split('/').at(-1)).unwarp()
+        () => option(path.split('/').at(-1)).unwarp(),
       )
       .take()
     const save_path = option(path.split('/').slice(0, -1).join('/')).unwarp()
@@ -219,7 +210,7 @@ const image_save = debounce(async () => {
       },
       async () => {
         await error_message()
-      }
+      },
     )
   })
 }, 888)

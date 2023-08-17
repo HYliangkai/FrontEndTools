@@ -27,10 +27,19 @@ export const routes: Array<RouteRecordRaw> = [
         }
       }
     ],
-  }, {
+  },
+  {
     path: '/time',
     name: '时间',
     component: () => import('@/page/time/index.vue'),
+    meta: {
+      type: 'single' as RouteType
+    }
+  },
+  {
+    path: '/gpt',
+    name: "GPT",
+    component: () => import('@/page/gpt/index.vue'),
     meta: {
       type: 'single' as RouteType
     }

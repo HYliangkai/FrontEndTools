@@ -1,10 +1,10 @@
 <!-- Desc : 页面布局 -->
 <template>
-  <div class="layout">
+  <div id="layout" class="layout">
     <!-- Html:导航栏 -->
-    <Navigation class="nav" />
+    <Navigation v-if="sider_state" class="nav" />
     <!-- Html:工具栏 -->
-    <Toolbar class="tool" data-tauri-drag-region />
+    <Toolbar id="tool" class="tool" data-tauri-drag-region @sider-change="sider_handle" />
     <!-- Html:显示区域 -->
     <div class="main"><router-view :key="route.path" /></div>
   </div>
@@ -15,7 +15,31 @@
 <script setup lang="ts">
 import Navigation from '@/page/navigation/index.vue'
 import Toolbar from '@/page/toolbar/index.vue'
+import {Own, option, pipe, result} from '@/utils/mod'
 const route = useRoute()
+
+const sider_state = ref(true)
+const sider_handle = () => {
+  sider_state.value = !sider_state.value
+  Own(sider_state.value).match(
+    () => {
+      const lay_out = option(document.getElementById('layout')).unwarp()
+      lay_out.style.gridTemplateColumns = '274px 1fr'
+      const tool = option(document.getElementById('tool')).unwarp()
+      tool.style.paddingLeft = '0px'
+      const sider_btn = option(document.getElementById('sider-btn')).unwarp()
+      sider_btn.style.rotate = '0deg'
+    },
+    () => {
+      const lay_out = option(document.getElementById('layout')).unwarp()
+      lay_out.style.gridTemplateColumns = '0px 1fr'
+      const tool = option(document.getElementById('tool')).unwarp()
+      tool.style.paddingLeft = '64px'
+      const sider_btn = option(document.getElementById('sider-btn')).unwarp()
+      sider_btn.style.rotate = '180deg'
+    },
+  )
+}
 </script>
 
 <!------------------------------>
@@ -29,7 +53,6 @@ const route = useRoute()
   display: grid;
   grid-template-rows: 30px 1fr;
   grid-template-columns: 274px 1fr;
-
   grid-template-areas: 'nav tool' 'nav main';
   .nav {
     grid-area: nav;

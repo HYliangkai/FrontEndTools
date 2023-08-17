@@ -1,0 +1,6 @@
+[submodule "src/utils/FP"]
+	path = src/utils/FP
+	url = https://github.com/HYliangkai/fpSystem.git
+[submodule "src/style/commonStyle"]
+	path = src/style/commonStyle
+	url = https://github.com/HYliangkai/commonStyle.git

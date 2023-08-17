@@ -1,7 +1,13 @@
 <!-- Desc : svg组件 -->
 <template>
-  <svg aria-hidden="true" class="svg-icon pointer" :width="props.size" :height="props.size">
-    <use :xlink:href="`#icon-${props.name}`" :fill="props.color" />
+  <svg
+    aria-hidden="true"
+    class="svg-icon pointer"
+    :width="props.size"
+    :style="{fontSize: props.size + 'px', fill: props.color}"
+    :height="props.size"
+  >
+    <use :xlink:href="`#icon-${props.name}`" />
   </svg>
 </template>
 

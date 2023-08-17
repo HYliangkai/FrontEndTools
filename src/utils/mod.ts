@@ -1,2 +1,3 @@
-export * from '@/utils/FE/mod'
-export * from '@/utils/debounce_throttle' 
+
+export * from '@/utils/debounce_throttle'
+export * from './FP/npmBuild/esm/mod'
