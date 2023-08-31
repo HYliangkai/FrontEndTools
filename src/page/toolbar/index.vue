@@ -17,7 +17,7 @@
           name="sidebtn"
           size="20"
           data-tauri-drag-region
-          @click="emit('sider-change')"
+          @click="sider_change"
         />
       </div>
       <div class="row-end flex-1" data-tauri-drag-region>
@@ -72,6 +72,11 @@ const put_top = () => {
       top_state.value = Own(true)
     },
   )
+}
+
+const sider_change = () => {
+  emit('sider-change')
+  dispatchEvent(new CustomEvent('sider-change'))
 }
 
 const put_sider = () => {}

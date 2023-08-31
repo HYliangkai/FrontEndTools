@@ -2,7 +2,7 @@
 <template>
   <div id="layout" class="layout">
     <!-- Html:导航栏 -->
-    <Navigation v-if="sider_state" class="nav" />
+    <Navigation v-show="sider_state" id="nav" class="nav" />
     <!-- Html:工具栏 -->
     <Toolbar id="tool" class="tool" data-tauri-drag-region @sider-change="sider_handle" />
     <!-- Html:显示区域 -->

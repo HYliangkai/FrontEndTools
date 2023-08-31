@@ -1,47 +1,133 @@
-import { RouteRecordRaw } from 'vue-router'
+import {RouteRecordRaw} from 'vue-router'
 
 export type RouteType = 'father' | 'kid' | 'single'
 export const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: '首页',
+    name: 'Home',
     component: () => import('@/page/home/index.vue'),
     meta: {
-      type: 'single' as RouteType
-    }
+      type: 'single' as RouteType,
+    },
   },
   {
     path: '/picture',
-    name: '图片',
+    name: 'Picture',
     redirect: '/picture/base',
     meta: {
-      type: 'father' as RouteType
+      type: 'father' as RouteType,
     },
     children: [
       {
         path: '/picture/base',
-        name: '图片转base64',
+        name: 'PictureToBase',
         component: () => import('@/page/picture/base2Pic/index.vue'),
         meta: {
-          type: 'kid' as RouteType
-        }
-      }
+          type: 'kid' as RouteType,
+        },
+      },
     ],
   },
   {
     path: '/time',
-    name: '时间',
+    name: 'Time',
     component: () => import('@/page/time/index.vue'),
     meta: {
-      type: 'single' as RouteType
-    }
+      type: 'single' as RouteType,
+    },
+  },
+  {
+    path: '/color',
+    name: 'Color',
+    redirect: '/color/fastCompute',
+    meta: {
+      type: 'father' as RouteType,
+    },
+    children: [
+      {
+        path: '/color/fastCompute',
+        name: 'FastComputeColor',
+        component: () => import('@/page/color/fastCompute/index.vue'),
+        meta: {
+          type: 'kid' as RouteType,
+        },
+      },
+    ],
   },
   {
     path: '/gpt',
-    name: "GPT",
+    name: 'Chat',
     component: () => import('@/page/gpt/index.vue'),
     meta: {
-      type: 'single' as RouteType
-    }
-  }
+      type: 'single' as RouteType,
+    },
+  },
+  {
+    path: '/regexp',
+    name: 'RegExp',
+    component: () => import('@/page/regExp/index.vue'),
+    meta: {
+      type: 'single' as RouteType,
+    },
+  },
+  {
+    path: '/css',
+    name: 'CSS',
+    redirect: '/css/changeGradually',
+    meta: {
+      type: 'father' as RouteType,
+    },
+    children: [
+      {
+        path: '/css/changeGradually',
+        name: 'ChangeGradually',
+        component: () => import('@/page/css/changeGradually/index.vue'),
+        meta: {
+          type: 'kid' as RouteType,
+        },
+      },
+      {
+        path: '/css/shadow',
+        name: 'Shadow',
+        component: () => import('@/page/css/shadow/index.vue'),
+        meta: {
+          type: 'kid' as RouteType,
+        },
+      },
+      {
+        path: '/css/glass',
+        name: 'Glass',
+        component: () => import('@/page/css/glass/index.vue'),
+        meta: {
+          type: 'kid' as RouteType,
+        },
+      },
+    ],
+  },
+  {
+    path: '/other',
+    name: 'Other',
+    redirect: '/other/diff',
+    meta: {
+      type: 'father' as RouteType,
+    },
+    children: [
+      {
+        path: '/other/diff',
+        name: 'Diff',
+        component: () => import('@/page/other/diff/index.vue'),
+        meta: {
+          type: 'single' as RouteType,
+        },
+      },
+      {
+        path: '/other/fullAngle',
+        name: 'FullAngle',
+        component: () => import('@/page/other/fullAngle/index.vue'),
+        meta: {
+          type: 'single' as RouteType,
+        },
+      },
+    ],
+  },
 ]

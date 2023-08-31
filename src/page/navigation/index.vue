@@ -12,11 +12,11 @@
       v-for="(item, index) in routes_list"
       class="radius-large flex box-center h-40 w-full mb-8 color-white pointer"
       :key="index"
-      :style="{background: route.path == item.path ? '#3755dc' : '#005edf'}"
+      :class="route.path == item.path ? 'select' : 'no-select'"
       @click="to_router(item)"
     >
       <div>
-        <span>{{ item.name }}</span>
+        <span class="font-ms">{{ item.name }}</span>
       </div>
     </div>
   </div>
@@ -52,6 +52,7 @@ function drop(event: any) {
 //props
 const router = useRouter()
 const route = useRoute()
+router.push(route.path)
 
 // const props = defineProps<Props>()
 //emit
@@ -91,4 +92,18 @@ const to_router = (route: RouteRecordRaw) => {
 
 <!------------------------------>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.select {
+  background: #3755dc;
+}
+.no-select {
+  background: rgb(17, 12, 97);
+  background: linear-gradient(
+    90deg,
+    rgba(17, 12, 97, 1) 0%,
+    rgba(11, 11, 139, 1) 10%,
+    rgba(7, 55, 151, 1) 18%,
+    rgba(0, 212, 255, 0.8884147408963585) 100%
+  );
+}
+</style>

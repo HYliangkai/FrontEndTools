@@ -1,7 +1,11 @@
-<!-- Desc : ChatGPT:原理是直接嵌套iframe:不可行 -->
+<!-- Desc : 玻璃窗 -->
 <template>
   <div class="h-full y-hidden x-hidden">
-    <!-- <iframe class="h-full" src="https://chat.openai.com" :style="{width: width + 'px'}"></iframe> -->
+    <iframe
+      class="h-full"
+      src="https://www.lingdaima.com/glass/"
+      :style="{width: width + 'px'}"
+    ></iframe>
   </div>
 </template>
 

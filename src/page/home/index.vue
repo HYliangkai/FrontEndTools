@@ -1,6 +1,12 @@
 <!-- Desc : 默认主页 -->
 <template>
-  <div class="h-full w-full home font-kaiti box-center">我是首页,啥也没有</div>
+  <div class="h-full w-full home font-kaiti box-center">
+    <div>
+      <img width="200" height="200" class="desc-home" src="../../assets/images/avg.png" alt="" />
+      <div class="t-center mt-32 ts-28 t-bold">工具箱</div>
+      <!-- 查看内存占用 cpu温度 风扇转速  -->
+    </div>
+  </div>
 </template>
 
 <!------------------------------>
@@ -20,4 +26,10 @@ const emit = defineEmits([])
 
 <!------------------------------>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.desc-home {
+  display: block;
+  border-radius: 50%;
+  box-shadow: -29px 29px 58px #b5b5b5, 29px -29px 58px #ffffff;
+}
+</style>
