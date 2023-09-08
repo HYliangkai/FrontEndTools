@@ -12,6 +12,7 @@ declare module 'vue' {
     ADivider: typeof import('ant-design-vue/es')['Divider']
     AInput: typeof import('ant-design-vue/es')['Input']
     AInputGroup: typeof import('ant-design-vue/es')['InputGroup']
+    AInputNumber: typeof import('ant-design-vue/es')['InputNumber']
     AInputSearch: typeof import('ant-design-vue/es')['InputSearch']
     ARadio: typeof import('ant-design-vue/es')['Radio']
     ARadioButton: typeof import('ant-design-vue/es')['RadioButton']

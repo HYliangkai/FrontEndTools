@@ -12,5 +12,7 @@
     "html-css-class-completion.includeGlobPattern": "**/src/style/commonStyle/**.{css,scss}",
     "prettier.configPath": "./.prettierrc",
     "eslint.enable": true,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
   },
 }

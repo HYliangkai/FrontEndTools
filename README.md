@@ -2,9 +2,9 @@
 + run `pnpm run tauri dev`or `pnpm run desdev` to setup the application 
 
 ## 小功能
-- [ ] 白天/夜间模式
+- [ ] 白天/夜间模式 
 - [x] 窗口置顶
-- [ ] 侧边栏可缩放
+- [x] 侧边栏可缩放
 - [ ] 全局搜索
 
 ## 插件系统
@@ -20,9 +20,13 @@
 ### 其他小工具
 - [ ] 半角全角转换
 - [ ] diff工具(高性能)
+- [ ] 长度转化[cm - pt - px ]
+
+### CURL
+- [ ] 快速的接口请求
 
 ### 正则表达式
-- [ ] 正则表达式解析工具
+- [x] 正则表达式解析工具
 
 ### 零代码-前端工具箱的iframe
 [this](https://www.lingdaima.com/?ref=nav.poetries.top)
@@ -44,9 +48,6 @@
 
 ### 时间
 - [x] 时间戳转化 
-
-### 字典
-- [ ] 快速API调用(一个简易的curl)
 
 ### 下载
 - [ ] 可自定义线程的下载器(maybe支持百度云/阿里云/蓝奏云/夸克云)

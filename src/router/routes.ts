@@ -55,14 +55,6 @@ export const routes: Array<RouteRecordRaw> = [
     ],
   },
   {
-    path: '/gpt',
-    name: 'Chat',
-    component: () => import('@/page/gpt/index.vue'),
-    meta: {
-      type: 'single' as RouteType,
-    },
-  },
-  {
     path: '/regexp',
     name: 'RegExp',
     component: () => import('@/page/regExp/index.vue'),
@@ -103,6 +95,14 @@ export const routes: Array<RouteRecordRaw> = [
         },
       },
     ],
+  },
+  {
+    path: '/curl',
+    name: 'Curl',
+    component: () => import('@/page/curl/index.vue'),
+    meta: {
+      type: 'single' as RouteType,
+    },
   },
   {
     path: '/other',

@@ -64,7 +64,7 @@ const sider_handle = () => {
     grid-area: tool;
   }
   .main {
-    background: #f9f9f9;
+    background: rgb(232, 236, 241);
     grid-area: main;
     overflow-y: auto;
     overflow-x: hidden;

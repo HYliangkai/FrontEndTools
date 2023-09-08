@@ -3,7 +3,7 @@
   <div class="h-full w-full y-auto px-24">
     <div class="py-24">
       <div class="t-center font-ms" style="font-size: 144px">{{ now }}</div>
-      <div class="row-end color-font ts-28 mt-12">{{ now_day_info }}</div>
+      <div class="row-end font-base ts-28 mt-12">{{ now_day_info }}</div>
     </div>
     <a-divider style="height: 2px" orientation="left">时间戳</a-divider>
     <div class="mt-32 relative">
