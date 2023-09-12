@@ -1,3 +1,4 @@
+import {L} from '@tauri-apps/api/event-41a9edf5'
 import {RouteRecordRaw} from 'vue-router'
 
 export type RouteType = 'father' | 'kid' | 'single'
@@ -7,6 +8,7 @@ export const routes: Array<RouteRecordRaw> = [
     name: 'Home',
     component: () => import('@/page/home/index.vue'),
     meta: {
+      icon: 'home',
       type: 'single' as RouteType,
     },
   },
@@ -15,6 +17,7 @@ export const routes: Array<RouteRecordRaw> = [
     name: 'Picture',
     redirect: '/picture/base',
     meta: {
+      icon: 'picture',
       type: 'father' as RouteType,
     },
     children: [
@@ -23,6 +26,7 @@ export const routes: Array<RouteRecordRaw> = [
         name: 'PictureToBase',
         component: () => import('@/page/picture/base2Pic/index.vue'),
         meta: {
+          father: 'Picture',
           type: 'kid' as RouteType,
         },
       },
@@ -33,6 +37,7 @@ export const routes: Array<RouteRecordRaw> = [
     name: 'Time',
     component: () => import('@/page/time/index.vue'),
     meta: {
+      icon: 'time',
       type: 'single' as RouteType,
     },
   },
@@ -41,6 +46,7 @@ export const routes: Array<RouteRecordRaw> = [
     name: 'Color',
     redirect: '/color/fastCompute',
     meta: {
+      icon: 'color',
       type: 'father' as RouteType,
     },
     children: [
@@ -49,6 +55,7 @@ export const routes: Array<RouteRecordRaw> = [
         name: 'FastComputeColor',
         component: () => import('@/page/color/fastCompute/index.vue'),
         meta: {
+          father: 'Color',
           type: 'kid' as RouteType,
         },
       },
@@ -59,6 +66,7 @@ export const routes: Array<RouteRecordRaw> = [
     name: 'RegExp',
     component: () => import('@/page/regExp/index.vue'),
     meta: {
+      icon: 'exp',
       type: 'single' as RouteType,
     },
   },
@@ -67,6 +75,7 @@ export const routes: Array<RouteRecordRaw> = [
     name: 'CSS',
     redirect: '/css/changeGradually',
     meta: {
+      icon: 'css',
       type: 'father' as RouteType,
     },
     children: [
@@ -75,6 +84,7 @@ export const routes: Array<RouteRecordRaw> = [
         name: 'ChangeGradually',
         component: () => import('@/page/css/changeGradually/index.vue'),
         meta: {
+          father: 'CSS',
           type: 'kid' as RouteType,
         },
       },
@@ -83,6 +93,7 @@ export const routes: Array<RouteRecordRaw> = [
         name: 'Shadow',
         component: () => import('@/page/css/shadow/index.vue'),
         meta: {
+          father: 'CSS',
           type: 'kid' as RouteType,
         },
       },
@@ -91,6 +102,7 @@ export const routes: Array<RouteRecordRaw> = [
         name: 'Glass',
         component: () => import('@/page/css/glass/index.vue'),
         meta: {
+          father: 'CSS',
           type: 'kid' as RouteType,
         },
       },
@@ -101,6 +113,7 @@ export const routes: Array<RouteRecordRaw> = [
     name: 'Curl',
     component: () => import('@/page/curl/index.vue'),
     meta: {
+      icon: 'curl',
       type: 'single' as RouteType,
     },
   },
@@ -109,6 +122,7 @@ export const routes: Array<RouteRecordRaw> = [
     name: 'Other',
     redirect: '/other/diff',
     meta: {
+      icon: 'other',
       type: 'father' as RouteType,
     },
     children: [
@@ -117,7 +131,8 @@ export const routes: Array<RouteRecordRaw> = [
         name: 'Diff',
         component: () => import('@/page/other/diff/index.vue'),
         meta: {
-          type: 'single' as RouteType,
+          father: 'Other',
+          type: 'kid' as RouteType,
         },
       },
       {
@@ -125,7 +140,8 @@ export const routes: Array<RouteRecordRaw> = [
         name: 'FullAngle',
         component: () => import('@/page/other/fullAngle/index.vue'),
         meta: {
-          type: 'single' as RouteType,
+          father: 'Other',
+          type: 'kid' as RouteType,
         },
       },
     ],

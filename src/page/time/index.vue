@@ -79,7 +79,7 @@
 
 <script setup lang="ts">
 import {life_cycle} from '@/hooks/mod'
-import {Own} from '@/utils/FP/mod'
+import {Own} from '@/utils/mod'
 import {None, Option, Some} from '@/utils/mod'
 import {C} from '@tauri-apps/api/event-41a9edf5'
 import {SelectProps} from 'ant-design-vue'

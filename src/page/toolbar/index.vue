@@ -4,10 +4,6 @@
     class="h-full w-full bg-page dark-shadow flex it-center px-12"
     style="border-bottom: 1px solid #cfdafb"
     data-tauri-drag-region
-    @dragleave="dragleave"
-    @dragenter="dragenter"
-    @dragover="dragover"
-    @drop="drop"
   >
     <div class="flex w-full flex it-center" data-tauri-drag-region>
       <div class="shrink-0 flex it-center" data-tauri-drag-region>
@@ -40,24 +36,6 @@ import {window} from '@tauri-apps/api'
 
 //emit
 const emit = defineEmits(['sider-change'])
-
-//import
-function dragenter(event: any): void {
-  event.stopPropagation()
-  event.preventDefault()
-}
-function dragover(event: any) {
-  event.stopPropagation()
-  event.preventDefault()
-}
-function dragleave(event: any) {
-  event.stopPropagation()
-  event.preventDefault()
-}
-function drop(event: any) {
-  event.stopPropagation()
-  event.preventDefault()
-}
 
 const top_state = ref(Own(false))
 const put_top = () => {

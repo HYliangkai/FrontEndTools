@@ -2,24 +2,25 @@
 <template>
   <div class="h-full w-full box-center" :style="{background: hex}">
     <div
-      class="grad-class w-35per"
+      class="grad-class w-50per"
       :style="{
         border: `2px solid ${lint}`,
+        maxWidth: '720px',
       }"
     >
       <div class="row-center">
         <div class="w-100 default us-none">HEX</div>
         <a-input v-model:value="hex" style="width: calc(100% - 100px)" :maxlength="7" />
       </div>
-      <div class="row-center mt-24">
+      <div class="row-center mt-48">
         <div class="w-100 default us-none">R</div>
         <a-input-number v-model:value="r" style="width: calc(100% - 100px)" :max="255" :min="0" />
       </div>
-      <div class="row-center mt-24">
+      <div class="row-center mt-48">
         <div class="w-100 default us-none">G</div>
         <a-input-number v-model:value="g" style="width: calc(100% - 100px)" :max="255" :min="0" />
       </div>
-      <div class="row-center mt-24">
+      <div class="row-center mt-48">
         <div class="w-100 default us-none">B</div>
         <a-input-number v-model:value="b" style="width: calc(100% - 100px)" :max="255" :min="0" />
       </div>
@@ -65,7 +66,7 @@ watch([r, g, b], ([r, g, b]) => {
 .grad-class {
   background: white;
   border-radius: 8px;
-  padding: 24px;
+  padding: 48px;
   box-shadow: 2.8px 2.8px 11.5px rgba(0, 0, 0, 0.09), 6.7px 6.7px 21px rgba(0, 0, 0, 0.065),
     12.5px 12.5px 28.7px rgba(0, 0, 0, 0.054), 22.3px 22.3px 35.5px rgba(0, 0, 0, 0.045),
     41.8px 41.8px 44.6px rgba(0, 0, 0, 0.036), 100px 100px 80px rgba(0, 0, 0, 0.025);

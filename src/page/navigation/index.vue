@@ -10,13 +10,26 @@
     <div class="h-30"></div>
     <div
       v-for="(item, index) in routes_list"
-      class="radius-large flex box-center h-40 w-full mb-8 color-white pointer"
+      class="radius-large row-center h-43 w-full mb-8 color-333 pointer"
       :key="index"
       :class="route.path == item.path ? 'select' : 'no-select'"
       @click="to_router(item)"
     >
-      <div>
+      <div class="w-36 shrink-0 box-center">
+        <Svger :name="item.meta?.icon ?? ''" />
+      </div>
+      <div class="flex-1 box-center">
         <span class="font-ms">{{ item.name }}</span>
+      </div>
+      <div class="w-28 shrink-0">
+        <DownOutlined
+          v-if="
+            option(item.meta?.type)
+              .map((i) => i == 'father' && now_father(item.name as string))
+              .unwrap_or(false)
+          "
+          class="ts-12"
+        />
       </div>
     </div>
   </div>
@@ -25,10 +38,9 @@
 <!------------------------------>
 
 <script setup lang="ts">
-//import
+import {DownOutlined} from '@ant-design/icons-vue'
 import {routes, RouteType} from '@/router/routes'
-import {Own} from '@/utils/FP/mod'
-
+import {Own} from '@/utils/mod'
 import {option} from '@/utils/mod'
 import {RouteRecordRaw} from 'vue-router'
 
@@ -52,6 +64,7 @@ function drop(event: any) {
 //props
 const router = useRouter()
 const route = useRoute()
+
 router.push(route.path)
 
 // const props = defineProps<Props>()
@@ -87,6 +100,13 @@ const to_router = (route: RouteRecordRaw) => {
   router.push(route.path)
 }
 
+const now_father = (name: string) =>
+  option(route.meta?.father)
+    .map((it) => {
+      return it == name
+    })
+    .unwrap_or(false)
+
 //hooks
 </script>
 
@@ -94,16 +114,9 @@ const to_router = (route: RouteRecordRaw) => {
 
 <style scoped lang="scss">
 .select {
-  background: #3755dc;
+  background: rgb(233, 244, 254);
 }
 .no-select {
-  background: rgb(17, 12, 97);
-  background: linear-gradient(
-    90deg,
-    rgba(17, 12, 97, 1) 0%,
-    rgba(11, 11, 139, 1) 10%,
-    rgba(7, 55, 151, 1) 18%,
-    rgba(0, 212, 255, 0.8884147408963585) 100%
-  );
+  background: rgba(0, 0, 0, 0.1);
 }
 </style>

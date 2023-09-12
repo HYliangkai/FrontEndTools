@@ -1,5 +1,4 @@
 <!-- Desc : Base64 <-- 图片相互转化 -->
-<!-- Todo : 拖拽事件 -->
 <template>
   <div class="p-24 h-full">
     <!-- Html:选择区域 -->
@@ -89,7 +88,7 @@ import {error_message, info_message} from '@/hooks/mod'
 import {downloadDir, desktopDir} from '@tauri-apps/api/path'
 import {debounce} from '@/utils/mod'
 import {option} from '@/utils/mod'
-import {Own} from '@/utils/FP/mod'
+import {Own} from '@/utils/FP/npmBuild/esm/mod'
 
 function dragenter(event: any): void {
   event.stopPropagation()

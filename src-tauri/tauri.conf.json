@@ -14,6 +14,9 @@
     "macOSPrivateApi": true,
     "allowlist": {
       "all": false,
+      "http": {
+        "scope": ["http://**", "https://**"]
+      },
       "clipboard": {
         "all": true,
         "writeText": true,
@@ -67,11 +70,12 @@
         "unminimize": false
       }
     },
-
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "com.top.chzky",
+      "category": "DeveloperTool",
+
       "icon": [
         "icons/32x32.png",
         "icons/128x128.svg",

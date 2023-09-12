@@ -7,27 +7,17 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ACascader: typeof import('ant-design-vue/es')['Cascader']
     ACheckbox: typeof import('ant-design-vue/es')['Checkbox']
     ADivider: typeof import('ant-design-vue/es')['Divider']
     AInput: typeof import('ant-design-vue/es')['Input']
-    AInputGroup: typeof import('ant-design-vue/es')['InputGroup']
     AInputNumber: typeof import('ant-design-vue/es')['InputNumber']
     AInputSearch: typeof import('ant-design-vue/es')['InputSearch']
-    ARadio: typeof import('ant-design-vue/es')['Radio']
-    ARadioButton: typeof import('ant-design-vue/es')['RadioButton']
-    ARadioGroup: typeof import('ant-design-vue/es')['RadioGroup']
     ASelect: typeof import('ant-design-vue/es')['Select']
     ASelectOption: typeof import('ant-design-vue/es')['SelectOption']
-    ASteps: typeof import('ant-design-vue/es')['Steps']
     ATextarea: typeof import('ant-design-vue/es')['Textarea']
-    ATooltip: typeof import('ant-design-vue/es')['Tooltip']
     CkBtn: typeof import('./src/components/ckBtn/index.vue')['default']
-    Components: typeof import('./src/components/index.vue')['default']
-    Greet: typeof import('./src/components/Greet.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Svger: typeof import('./src/components/svger/index.vue')['default']
-    TitleBar: typeof import('./src/components/titleBar/index.vue')['default']
   }
 }
