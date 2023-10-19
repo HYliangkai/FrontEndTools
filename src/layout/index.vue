@@ -15,10 +15,10 @@
 <script setup lang="ts">
 import Navigation from '@/page/navigation/index.vue'
 import Toolbar from '@/page/toolbar/index.vue'
-import {Own, option, pipe, result, stop_browser} from '@/utils/mod'
+import {Own, option, stop_browser} from '@/utils/mod'
 const route = useRoute()
-console.log('start')
-stop_browser()
+
+stop_browser('F12', 'drop')
 
 const sider_state = ref(true)
 const sider_handle = () => {

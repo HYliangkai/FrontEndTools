@@ -1,12 +1,6 @@
 <!-- Desc : 导航条 -->
 <template>
-  <div
-    class="h-full w-full px-8 us-none"
-    @dragenter="dragenter"
-    @dragover="dragover"
-    @dragleave="dragleave"
-    @drop="drop"
-  >
+  <div class="h-full w-full px-8 us-none">
     <div class="h-30"></div>
     <div
       v-for="(item, index) in routes_list"
@@ -20,6 +14,9 @@
       </div>
       <div class="flex-1 box-center">
         <span class="font-ms">{{ item.name }}</span>
+      </div>
+      <div class="w-28 shrink-0">
+      <RedoOutlined />
       </div>
       <div class="w-28 shrink-0">
         <DownOutlined
@@ -43,23 +40,6 @@ import {routes, RouteType} from '@/router/routes'
 import {Own} from '@/utils/mod'
 import {option} from '@/utils/mod'
 import {RouteRecordRaw} from 'vue-router'
-
-function dragenter(event: any): void {
-  event.stopPropagation()
-  event.preventDefault()
-}
-function dragover(event: any) {
-  event.stopPropagation()
-  event.preventDefault()
-}
-function dragleave(event: any) {
-  event.stopPropagation()
-  event.preventDefault()
-}
-function drop(event: any) {
-  event.stopPropagation()
-  event.preventDefault()
-}
 
 //props
 const router = useRouter()

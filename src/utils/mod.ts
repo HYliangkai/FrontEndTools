@@ -1,3 +1,5 @@
 export * from '@/utils/debounce_throttle'
-export * from './FP/npmBuild/esm/mod'
+export * from './FP/dist/esm/mod'
 export * from './stopBrowser'
+export * from './tauriHttp'
+export * from './elementAnimation'

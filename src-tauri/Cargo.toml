@@ -13,7 +13,7 @@ edition = "2021"
 tauri-build = { version = "1.4", features = [] }
 
 [dependencies]
-tauri = { version = "1.4", features = [
+tauri = { version = "1.4", features = [ "http-all",
   "window-set-always-on-top",
   "window-create",
   "path-all",

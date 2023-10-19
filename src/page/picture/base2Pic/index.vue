@@ -86,9 +86,7 @@ import {invoke} from '@tauri-apps/api'
 import {open, save, message} from '@tauri-apps/api/dialog'
 import {error_message, info_message} from '@/hooks/mod'
 import {downloadDir, desktopDir} from '@tauri-apps/api/path'
-import {debounce} from '@/utils/mod'
-import {option} from '@/utils/mod'
-import {Own} from '@/utils/FP/npmBuild/esm/mod'
+import {option, Own, debounce} from '../../../utils/mod'
 
 function dragenter(event: any): void {
   event.stopPropagation()
@@ -103,7 +101,7 @@ function dragleave(event: any) {
   event.preventDefault()
 }
 
-//#3e54d4
+// //#3e54d4
 
 const base64 = ref('')
 const image_info = ref<{

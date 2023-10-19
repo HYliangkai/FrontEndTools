@@ -17,6 +17,7 @@
         />
       </div>
       <div class="row-end flex-1" data-tauri-drag-region>
+        <RedoOutlined class="mr-12 pointer" style="rotate: 45deg" @click="put_load" />
         <SvgIcon
           name="ding"
           data-tauri-drag-region
@@ -31,11 +32,16 @@
 <!------------------------------>
 
 <script setup lang="ts">
+import {RedoOutlined} from '@ant-design/icons-vue'
 import {option, Own} from '@/utils/mod'
 import {window} from '@tauri-apps/api'
 
 //emit
 const emit = defineEmits(['sider-change'])
+
+const put_load = () => {
+  location.reload()
+}
 
 const top_state = ref(Own(false))
 const put_top = () => {

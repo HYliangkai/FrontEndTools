@@ -50,6 +50,9 @@
 ### Other plan
 - [x] 系统资源监视器 (放在首页)
 
+### Translate
+- [ ] 谷歌翻译
+
 
 ## 系统UI
 
@@ -65,7 +68,7 @@
   1. 性能强于sqllite(c->rust->js)?
   2. 语法容易
   缺点:
-  1. 无法在rust端交互
+  1. 无法在rust端交互 
 + SqlLite  
   优点:
   1. 在rust端交互,有利于高性能计算

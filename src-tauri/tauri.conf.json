@@ -15,6 +15,7 @@
     "allowlist": {
       "all": false,
       "http": {
+        "all": true,
         "scope": ["http://**", "https://**"]
       },
       "clipboard": {

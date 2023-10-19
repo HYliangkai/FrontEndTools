@@ -13,6 +13,24 @@ export const routes: Array<RouteRecordRaw> = [
     },
   },
   {
+    path: '/todo',
+    name: 'TodoList',
+    component: () => import('@/page/todoList/index.vue'),
+    meta: {
+      icon: 'todo',
+      type: 'single' as RouteType,
+    },
+  },
+  {
+    path: '/translate',
+    name: 'Translate',
+    component: () => import('@/page/translate/index.vue'),
+    meta: {
+      icon: 'translate',
+      type: 'single' as RouteType,
+    },
+  },
+  {
     path: '/picture',
     name: 'Picture',
     redirect: '/picture/base',
